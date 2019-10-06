@@ -1,4 +1,4 @@
-# Johanneberg Challege - Snake in p5.js!
+# Johanneberg Challenge - Snake in p5.js!
 
 >The following documentation will provide you with all information needed to participate in the challenge.
 
