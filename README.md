@@ -7,6 +7,7 @@
 - Rules - How to play?
 - Setup
 - Assessment
+- Deadline
 - Links
 
 ## Rules - How to play?
@@ -27,6 +28,14 @@ As in all competitions we have to base our assessment on something right? Follow
 
 - Innovation, we'd like to se that the developer thought outside the box!
 - Code quality, we will look at the structure of the code. Is it readable, efficient and easy to follow?
+
+## Deadline
+
+The project has to be done and turned in before **10/11-19** at 11:59PM. You can either send me a link to your GitHub project or just 
+the files as a regular mail: 
+
+>ida.lillevra@hotmail.com
+
 
 ## Setup
 
