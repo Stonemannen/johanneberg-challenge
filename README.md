@@ -6,6 +6,7 @@
 
 - Rules - How to play?
 - Setup
+- Assessment
 - Links
 
 ## Rules - How to play?
@@ -19,6 +20,13 @@ appear somewhere on the screen. The game is over when the snake either collides 
 
 You can read more about the snake game here!
 >https://en.wikipedia.org/wiki/Snake_(video_game_genre)
+
+## Assessment
+
+As in all competitions we have to base our assessment on something right? Following are some areas we will look at when we judge. 
+
+- Innovation, we'd like to se that the developer thought outside the box!
+- Code quality, we will look at the structure of the code. Is it readable, efficient and easy to follow?
 
 ## Setup
 
