@@ -31,7 +31,7 @@ As in all competitions we have to base our assessment on something right? Follow
 
 ## Deadline
 
-The project has to be done and turned in before **10/11-19** at 11:59PM. You can either send me a link to your GitHub project or just 
+The project has to be done and turned in before **15/11-19** at 11:59PM. You can either send me a link to your GitHub project or just 
 the files as a regular mail: 
 
 >ida.lillevra@hotmail.com
