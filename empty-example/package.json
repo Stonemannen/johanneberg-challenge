@@ -1,0 +1,16 @@
+{
+  "name": "snake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "browserify src/main.js > public/bundle.js"
+  },
+  "author": "Lucas Drufva",
+  "license": "ISC",
+  "dependencies": {
+    "browserify": "^16.5.0",
+    "signalhub": "^4.9.0"
+  }
+}

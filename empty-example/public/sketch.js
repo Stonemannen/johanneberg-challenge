@@ -1,4 +1,6 @@
-  //max pos x:32, y:32
+
+
+//max pos x:32, y:32
   var pos = [{x: 5,y: 5}];
   var direction = 0
   var state = 0
@@ -9,8 +11,12 @@
   var prevDir = 0
   var gameOver = false
 
+  var otherPlayer = []
+
 function setup() {
   createCanvas(660,660)
+
+  frameRate(30); 
 }
 
 function draw() {
@@ -21,7 +27,11 @@ function draw() {
       fill('red')
       rect(pos[i].x * 20, pos[i].y * 20, 20, 20)
     }
-      if (state % 5 == 0) {
+    for (var i = 0; i < otherPlayer.length; i++) {
+      fill('green')
+      rect(otherPlayer[i].x * 20, otherPlayer[i].y * 20, 20, 20)
+    }
+    if (state % 5 == 0) {
       for (var i = 0; i < pos.length - 1; i++) {
         pos[i].x = pos[i + 1].x
         pos[i].y = pos[i + 1].y
@@ -68,7 +78,6 @@ function draw() {
 
     fill('blue')
     rect(cherry.x * 20, cherry.y * 20, 20, 20)
-    console.log(cherry)
       
     if (keyIsDown(RIGHT_ARROW)) {
         if(prevDir !== 2){
@@ -90,10 +99,10 @@ function draw() {
     
     state++
       for(var i = 0; i < pos.length; i++){
-      for(var j = 0; j < pos.length; j++){
-        if(i != j){
-        if(pos[i].x === pos[j].x&&pos[i].y === pos[j].y){
-            gameOver = true
+        for(var j = 0; j < pos.length; j++){
+          if(i != j){
+            if(pos[i].x === pos[j].x&&pos[i].y === pos[j].y){
+              gameOver = true
               console.log(pos)
               console.log(i + " " + j)
           }
