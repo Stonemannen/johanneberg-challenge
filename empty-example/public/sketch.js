@@ -11,7 +11,7 @@
   var prevDir = 0
   var gameOver = false
 
-  var otherPlayer = []
+  var otherPlayers = []
 
 function setup() {
   createCanvas(660,660)
@@ -27,9 +27,12 @@ function draw() {
       fill('red')
       rect(pos[i].x * 20, pos[i].y * 20, 20, 20)
     }
-    for (var i = 0; i < otherPlayer.length; i++) {
-      fill('green')
-      rect(otherPlayer[i].x * 20, otherPlayer[i].y * 20, 20, 20)
+    console.log(otherPlayers)
+    for (var i = 0; i < otherPlayers.length; i++) {
+      for(var j = 0; j < otherPlayers[i].pos.length; j++){
+        fill('green')
+        rect(otherPlayers[i].pos[j].x * 20, otherPlayers[i].pos[j].y * 20, 20, 20)
+      }
     }
     if (state % 5 == 0) {
       for (var i = 0; i < pos.length - 1; i++) {

@@ -10839,31 +10839,41 @@ function extend() {
 var id = Math.random()
 
 var signalhub = require('signalhub')
-var hub = signalhub('my-app-name', [
-  'localhost:8080'
+var hub = signalhub('snakeGame', [
+  '192.168.2.171:8080'
 ])
+
+var lastCherry = cherry
  
-hub.subscribe('my-channel')
+hub.subscribe('position')
   .on('data', function (message) {
-    console.log(message)
     if(message.id != id){
-        otherPlayer = message.pos
+        var updated = false
+        for(var i = 0; i < otherPlayers.length; i++){
+            if(otherPlayers[i].id == message.id){
+                otherPlayers[i] = message
+                updated = true
+            }
+        }
+        if(!updated){
+            otherPlayers.push(message)
+        }
         if(message.cherry){
             cherry = message.cherry
         }   
+        console.log(message, otherPlayers, updated)
     }
   })
- 
-hub.broadcast('my-channel', {hello: 'world'})
 
-console.log("sent")
 
 
 function sendPos(){
-    console.log(cherry);
-    
-    hub.broadcast('my-channel', {id: id, pos: pos, cherry: cherry})
+    if(lastCherry != cherry){
+        hub.broadcast('position', {id: id, pos: pos, cherry: cherry})
+    }else{
+        hub.broadcast('position', {id: id, pos: pos})
+    }
 }
 
-setInterval(sendPos, 150)
+setInterval(sendPos, 100)
 },{"signalhub":54}]},{},[93]);
