@@ -116,5 +116,8 @@ function draw() {
         }
     }
     }
-    text(pos.length, 100,100)
+    text("        You: " + pos.length, 100,100)
+    for(var i = 0; i < otherPlayers.length; i++){
+      text("Other Player: " + otherPlayers[i].pos.length, 80,(100)+ (i+1)*20)
+    }
 }
