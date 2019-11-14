@@ -5,6 +5,8 @@ var cherry = {
   x: 22,
   y: 15
 }
+var cherryUpdated = false
+
 var prevDir = 0
 var gameOver = false
 
@@ -60,6 +62,7 @@ function draw() {
     if (cherry.x === pos[pos.length - 1].x && cherry.y === pos[pos.length - 1].y) {
       cherry.x = Math.floor(random(31)) + 1
       cherry.y = Math.floor(random(31)) + 1
+      cherryUpdated = true
 
       //add node to snake
       if (pos[0].direction == 0) {

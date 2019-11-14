@@ -10843,8 +10843,6 @@ var hub = signalhub('snakeGame', [
   'https://signalhub-jccqtwhdwc.now.sh',
   'https://signalhub-hzbibrznqa.now.sh'
 ])
-
-var lastCherry = cherry
  
 hub.subscribe('position')
   .on('data', function (message) {
@@ -10862,15 +10860,16 @@ hub.subscribe('position')
         if(message.cherry){
             cherry = message.cherry
         }   
-        console.log(message, otherPlayers, updated)
+        console.log(message, otherPlayers, updated, cherry)
     }
   })
 
 
 
 function sendPos(){
-    if(lastCherry != cherry){
+    if(cherryUpdated){
         hub.broadcast('position', {id: id, pos: pos, cherry: cherry})
+        cherryUpdated = false
     }else{
         hub.broadcast('position', {id: id, pos: pos})
     }
