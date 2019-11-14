@@ -2,7 +2,8 @@ var id = Math.random()
 
 var signalhub = require('signalhub')
 var hub = signalhub('snakeGame', [
-  '192.168.2.171:8080'
+  'https://signalhub-jccqtwhdwc.now.sh',
+  'https://signalhub-hzbibrznqa.now.sh'
 ])
 
 var lastCherry = cherry
